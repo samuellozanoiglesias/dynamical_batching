@@ -1,0 +1,48 @@
+use_gpu: false
+
+data:
+  dataset_name: rings
+  data_dir: ./data
+  num_classes: 3
+  points_per_class: 100
+  noise_std: 0.05
+  class_separation: 0.15
+  center_radius: 0.1
+  num_rings: 2
+  random_seed: 0
+model:
+  architecture: mlp_relu
+  init_type: glorot
+  nn_width: 50
+  num_hidden_layers: 1
+  use_bias: true
+training:
+  training_steps: 125000
+  save_metrics_every_n_steps: 50
+  batch_size: 50
+  random_seed: 0
+  loss: cross_entropy
+optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  gradient_clipping: null
+  l2_reg: 0.0
+  learning_rate: 0.002
+  momentum: 0.9
+  optimizer_type: adam
+dynamics:
+  w_max: 1
+  period_length: 320
+  bumps_before_tpt: true
+  bumps_at_tpt: true
+analysis:
+  switching_metrics: true
+  switching_null_run_dir: runs/null     # only in the bump run; or call compare_to_null() afterwards
+  switching_topk: 20
+  switching_snapshot: central_mean      # three_quarter | end
+  switching_regime_filter: auto         # bump | uniform | all
+  switching_probe_size_per_class: 256   # 0 disables rho_probe
+  switching_save_snapshots: true
+output:
+  output_dir: /data/samuel_lozano/dynamical-sgd
