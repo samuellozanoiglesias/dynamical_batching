@@ -1,0 +1,57 @@
+# cifar10_ICLR_plaincnn_bottleneck50 -- gridCNN version (use with launch_gridCNN.py / gridsearch_gridCNN.sbatch)
+use_gpu: true
+data:
+  dataset_name: cifar10
+  data_dir: ./data
+  num_classes: 10
+model:
+  architecture: cnn
+  cnn:
+    backbone: simple_cnn
+    channels:
+    - 16
+    - 32
+    - 64
+    kernel_size: 3
+    use_batchnorm: false
+    pool_every_block: true
+    dropout: 0.0
+    fc_hidden_dim: 50
+training:
+  training_steps: 100000
+  save_metrics_every_n_steps: 50
+  batch_size: 128
+  random_seed: 42
+  loss: cross_entropy
+optimizer:
+  optimizer_type: sgd
+  learning_rate: 0.05
+  momentum: 0.9
+  weight_decay: 0.0005
+  gradient_clipping: null
+  nesterov: false
+dynamics:
+  bumps_before_tpt: true
+  bumps_at_tpt: true
+  period_length: 200
+  w_max: 20.0
+  bump_order: null
+  tpt_accuracy_threshold: 1.0
+
+# ---- gridCNN additions -------------------------------------------------------
+# save_metrics_every_n_steps sets how often train/test loss+acc are evaluated
+# (5000-example subsets each) -- this is the single biggest cost knob. The
+# original resnet/myrtle configs used 1 (a 10k-image eval after EVERY step).
+# TPT is only detected at these eval points.
+performance:
+  amp: none              # none | bf16 | fp16  (bf16 ~1.5-2x faster on A100/H100, changes numerics slightly)
+  channels_last: false   # set true together with amp: bf16 for extra speed
+  cudnn_benchmark: true
+  fused_optimizer: true
+  eval_batch_size: 1000
+  num_threads: 1
+
+output:
+  output_dir: ./runs     # overridden per run by the sbatch script
+  plot: true             # one training_report.png at the end of each run
+  save_weights: false    # true -> model_weights.pt (myrtle5 ~19 MB x 1050 runs)
