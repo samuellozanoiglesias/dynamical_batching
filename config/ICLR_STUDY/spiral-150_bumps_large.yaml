@@ -35,7 +35,7 @@ optimizer:
   momentum: 0.9
   optimizer_type: adam
 dynamics:
-  w_max: 20
+  w_max: 10
   period_length: 150
   bumps_before_tpt: true
   bumps_at_tpt: true

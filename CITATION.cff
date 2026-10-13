@@ -1,0 +1,58 @@
+# This file tells GitHub ("Cite this repository") and Zenodo how to cite this code.
+# Before the first release: fill in the ORCIDs (or delete those lines).
+# After the arXiv posting: fill in the arXiv identifier in preferred-citation.
+# After Zenodo mints a DOI: add it under "doi" (top level).
+cff-version: 1.2.0
+message: "If you use this code, please cite the article in preferred-citation."
+type: software
+title: "Dynamical Batching: code and configuration files"
+abstract: >-
+  Code, configuration files and analysis scripts for "Dynamical Batching:
+  How Class-Cycling Training Shapes the Internal Structure of Neural
+  Networks". Dynamical Batching is a sampling protocol that periodically
+  emphasizes each class in the mini-batches while leaving the loss and
+  the optimizer unchanged.
+authors:
+  - family-names: Ratier-Werbin
+    given-names: Nicolás
+    email: nratier@ucm.es
+    affiliation: "Universidad Complutense de Madrid"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Lozano
+    given-names: Samuel
+    email: samuel.lozano@ucm.es
+    affiliation: "Universidad Complutense de Madrid"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Ruiz-García
+    given-names: Miguel
+    affiliation: "Universidad Complutense de Madrid"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/samuellozanoiglesias/dynamical_batching"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-13"
+# doi: "10.5281/zenodo.XXXXXXX"
+keywords:
+  - machine learning
+  - neural networks
+  - training dynamics
+  - curriculum
+  - modularity
+  - nonequilibrium training
+preferred-citation:
+  type: article
+  title: "Dynamical Batching: How Class-Cycling Training Shapes the Internal Structure of Neural Networks"
+  authors:
+    - family-names: Ratier-Werbin
+      given-names: Nicolás
+    - family-names: Lozano
+      given-names: Samuel
+    - family-names: Ruiz-García
+      given-names: Miguel
+  year: 2026
+  journal: "arXiv preprint"
+  # identifiers:
+  #   - type: other
+  #     value: "arXiv:XXXX.XXXXX"
+  #     description: "arXiv identifier"
+  # url: "https://arxiv.org/abs/XXXX.XXXXX"

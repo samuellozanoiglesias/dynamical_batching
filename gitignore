@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Data and run outputs (large; regenerate or download)
+data/
+runs/
+outputs/
+*.npz
+*.pt
+*.pkl
+
+# Cluster logs
+*.out
+*.err
+*.log
+nohup.out
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+brigit/
+cuenca/
