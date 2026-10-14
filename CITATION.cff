@@ -31,7 +31,7 @@ repository-code: "https://github.com/samuellozanoiglesias/dynamical_batching"
 license: MIT
 version: "1.0.0"
 date-released: "2026-10-13"
-# doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.23349474"
 keywords:
   - machine learning
   - neural networks
