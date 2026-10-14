@@ -1,0 +1,32 @@
+{
+  "title": "Dynamical Batching: code and configuration files",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "language": "eng",
+  "description": "<p>Code, configuration files and analysis scripts for the article <em>Dynamical Batching: How Class-Cycling Training Shapes the Internal Structure of Neural Networks</em> (N. Ratier-Werbin, S. Lozano and M. Ruiz-García).</p><p>Dynamical Batching is a sampling protocol that periodically emphasizes each class in the mini-batches while leaving the loss and the optimizer unchanged. The repository contains the MLP experiments on synthetic datasets (JAX), including the weight-level switching-set analysis, the CIFAR-10 grid searches over amplitude and period (PyTorch), and the scripts that produce the figures of the article.</p>",
+  "creators": [
+    {
+      "name": "Ratier-Werbin, Nicolás",
+      "affiliation": "Universidad Complutense de Madrid"
+    },
+    {
+      "name": "Lozano, Samuel",
+      "affiliation": "Universidad Complutense de Madrid"
+    },
+    {
+      "name": "Ruiz-García, Miguel",
+      "affiliation": "Universidad Complutense de Madrid"
+    }
+  ],
+  "keywords": [
+    "machine learning",
+    "neural networks",
+    "training dynamics",
+    "curriculum learning",
+    "modularity",
+    "nonequilibrium training",
+    "dynamical batching"
+  ],
+  "notes": "Funding: Fundación Ramón Areces; Ramón y Cajal program (RYC2021-032055-I) funded by MCIN/AEI/10.13039/501100011033 and by European Union NextGenerationEU/PRTR; HFSP Research Grant RGEC33/2024; grant PID2023-147067NB-I00 funded by MCIU/AEI/10.13039/501100011033 and by ERDF/EU."
+}
