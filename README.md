@@ -6,9 +6,7 @@ Code, configuration files and analysis scripts for the article
 > **Dynamical Batching: How Class-Cycling Training Shapes the Internal Structure of Neural Networks**,
 > arXiv:XXXX.XXXXX (2026).
 
-<!-- After the first Zenodo release, replace XXXXXXX with the concept-DOI number:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
--->
+[![DOI](https://zenodo.org/badge/1411810214.svg)](https://doi.org/10.5281/zenodo.23349474)
 
 **Dynamical Batching (DB)** is a sampling protocol that periodically emphasizes each class in the mini-batches, while leaving the loss and the optimizer unchanged. One focal class is emphasized per period of `T` steps, with a triangular ramp of amplitude `A`. A *cycle* is `C` consecutive periods, one per class. `A = 1` recovers **Uniform Batching (UB)**, in which every mini-batch has equal class proportions. In the last 5% of training steps, all batches are uniform.
 
